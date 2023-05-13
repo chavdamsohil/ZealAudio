@@ -3,7 +3,6 @@ import "./PoppularProducts.scss";
 import { useNavigate } from "react-router-dom";
 
 import allProductsdata from "./Data";
-import Product from "./Product";
 
 const data = allProductsdata;
 
@@ -18,7 +17,7 @@ const PopularProduct = () => {
       <div className="main">
         {data
           .filter(function (el) {
-            return el.popular == true;
+            return el.popular === true;
           })
           .map((prod, id) => {
             return (

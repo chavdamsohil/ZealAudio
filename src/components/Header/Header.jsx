@@ -8,11 +8,13 @@ import { Link } from "react-router-dom";
 import "./Header.scss";
 import Cart from "../Cart/Cart";
 import Search from "./Search/Search";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [showCart, SetShowCart] = useState(false);
   const [showSearch, SetShowSearch] = useState(false);
+  const { cartItems } = useSelector((state) => state.cart);
 
   const handleScroll = () => {
     const scroll = window.scrollY;
@@ -22,6 +24,7 @@ const Header = () => {
       setScrolled(false);
     }
   };
+
   useEffect(() => {
     document.addEventListener("scroll", handleScroll);
   }, []);
@@ -48,7 +51,7 @@ const Header = () => {
               }}
             >
               <CgShoppingCart></CgShoppingCart>
-              <span>5</span>
+              <span>{cartItems.length}</span>
             </span>
           </div>
         </div>

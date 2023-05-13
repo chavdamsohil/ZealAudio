@@ -4,7 +4,6 @@ const initialStateValues = {
   count: 0,
   cartItems: [],
 };
-console.log(initialStateValues.cartItems);
 
 export const cartSlice = createSlice({
   name: "cart",

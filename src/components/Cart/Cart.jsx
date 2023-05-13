@@ -1,5 +1,4 @@
 import { MdClose } from "react-icons/md";
-// import { BsCartX } from "react-icons/bs";
 import CartItem from "./CartItem/CartItem";
 import "./Cart.scss";
 import { useSelector } from "react-redux";
@@ -8,7 +7,6 @@ import { useEffect, useState } from "react";
 
 const Cart = ({ SetShowCart }) => {
   const { cartItems } = useSelector((state) => state.cart);
-
   const [total, setTotal] = useState(0);
 
   useEffect(() => {

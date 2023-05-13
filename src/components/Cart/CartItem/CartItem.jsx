@@ -8,7 +8,6 @@ import {
 } from "../../../features/cart/cartSlice";
 import { useSelector } from "react-redux";
 import allProductsdata from "../../Products/Product/Data";
-
 import "./CartItem.scss";
 
 const CartItem = () => {
